@@ -1,0 +1,19 @@
+{
+  "name": "node-pokemon-api",
+  "version": "1.0.0",
+  "description": "A API Rest to discover node js.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "nathan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.10"
+  }
+}
