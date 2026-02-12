@@ -10,7 +10,7 @@ const pokemons = [
  },
  {
   id: 2,
-  name: "Salamèche",
+  name: "Salameche",
   hp: 28,
   cp: 6,
   picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
@@ -91,11 +91,11 @@ const pokemons = [
  },
  {
   id: 11,
-  name: "Mélofée",
+  name: "Melofee",
   hp: 25,
   cp: 5,
   picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
-  types: ["Fée"],
+  types: ["Fee"],
   created: new Date()
  },
  {
