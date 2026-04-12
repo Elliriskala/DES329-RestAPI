@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Server DB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="wrapper">
+        <header class="glass-header">
+            <h1>Pokedex Explorer</h1>
+            <p>Read, Create, Update, and Delete Pokemon Data</p>
+
+            <div class="header-controls">
+                <input type="text" id="search-input" placeholder="Search by name or type..." class="search-bar">
+                <button id="add-btn" class="primary-btn">+ Catch New</button>
+            </div>
+        </header>
+
+        <!-- Reporting Dashboard -->
+        <section class="dashboard">
+            <div class="dashboard-card">
+                <h3>Total Pokemon</h3>
+                <p id="stat-total">0</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Average HP</h3>
+                <p id="stat-hp">0</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Average CP</h3>
+                <p id="stat-cp">0</p>
+            </div>
+        </section>
+
+        <main id="pokemon-container" class="grid-container">
+            <!-- Cards will be injected here -->
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Catching Pokemon from DB...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy;Groupe 4 web-based system</p>
+        </footer>
+    </div>
+
+    <!-- Modal for Add / Edit -->
+    <div id="pokemon-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 id="modal-title">Add Pokemon</h2>
+            <form id="pokemon-form">
+                <input type="hidden" id="form-id">
+
+                <div class="form-group">
+                    <label for="form-name">Name</label>
+                    <input type="text" id="form-name" required placeholder="e.g. Pikachu">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="form-hp">HP</label>
+                        <input type="number" id="form-hp" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-cp">CP</label>
+                        <input type="number" id="form-cp" required min="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-picture">Picture URL</label>
+                    <input type="url" id="form-picture" placeholder="https://..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Types (Comma separated)</label>
+                    <input type="text" id="form-types" placeholder="e.g. Grass, Poison" required>
+                </div>
+
+                <button type="submit" class="submit-btn primary-btn">Save Pokemon</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

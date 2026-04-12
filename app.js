@@ -7,7 +7,7 @@ const { Pokemon } = require("./helper.js");
 require("dotenv").config();
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(morgan("dev"))
   .use(bodyParser.json())
@@ -26,8 +26,7 @@ const connectDB = async () => {
 
 connectDB();
 
-// test route
-app.get("/", (req, res) => res.send("Hello World ;)"));
+// Root route handled by express.static("public")
 
 // get pokemon by id
 app.get("/api/pokemon/:id", async (req, res) => {

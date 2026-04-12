@@ -4,39 +4,39 @@ require("dotenv").config();
 
 const pokemons = [
   {
-    name: "Bulbizarre",
+    name: "Bulbasaur",
     hp: 25,
     cp: 5,
     picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-    types: ["Plante", "Poison"]
+    types: ["Grass", "Poison"]
   },
   {
-    name: "Salameche",
+    name: "Charmander",
     hp: 28,
     cp: 6,
     picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
-    types: ["Feu"]
+    types: ["Fire"]
   },
   {
-    name: "Carapuce",
+    name: "Squirtle",
     hp: 21,
     cp: 4,
     picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
-    types: ["Eau"]
+    types: ["Water"]
   },
   {
-    name: "Aspicot",
+    name: "Weedle",
     hp: 16,
     cp: 2,
     picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png",
-    types: ["Insecte", "Poison"]
+    types: ["Bug", "Poison"]
   },
   {
-    name: "Roucool",
+    name: "Pidgey",
     hp: 30,
     cp: 7,
     picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
-    types: ["Normal", "Vol"]
+    types: ["Normal", "Flying"]
   }
 ];
 

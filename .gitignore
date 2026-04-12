@@ -69,5 +69,5 @@ typings/
 .serverless
 
 dist
-public
+#public
 .history
