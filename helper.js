@@ -1,11 +1,26 @@
-exports.success = (message, data) => {
-    return {message, data}
-}
+const mongoose = require('mongoose');
 
-exports.getUniqueId = (pokemons) => {
-    const pokemonsIds = pokemons.map(pokemon => pokemon.id)
-    const maxId = pokemonsIds.reduce((a,b) => Math.max(a,b))
-    const uniqueId = maxId + 1
+const pokemonSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  hp: Number,
+  cp: Number,
+  picture: String,
+  types: [String],
+  metadata: mongoose.Schema.Types.Mixed 
+}, { timestamps: true });
 
-    return uniqueId
-}
+const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+
+// Helper function for API response
+const success = (message, data) => {
+  return {
+    message: message,
+    data: data
+  };
+};
+
+
+module.exports = {
+  Pokemon,
+  success,
+};

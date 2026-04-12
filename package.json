@@ -4,13 +4,17 @@
   "description": "A API Rest to discover node js.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "seed": "node seedDatabase.js"
   },
   "author": "nathan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.2",
-    "express": "^5.1.0"
+    "dotenv": "^17.4.1",
+    "express": "^5.1.0",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.4.1"
   },
   "devDependencies": {
     "morgan": "^1.10.1",
