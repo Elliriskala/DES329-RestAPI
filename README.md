@@ -1,23 +1,28 @@
-## RestAPI for system design and analysis course
+# Pokemon NoSQL Project - Group 7
 
-### All CRUD operations added and tested with Postman
+This project is a Node.js application designed to manage a Pokédex using a MongoDB atlas database.
 
-### GET all pokemons : http://localhost:3000/api/pokemons
+###
 
-![get-all](successfull-requests/get-all.png)
+git checkout noSQL
 
-### GET pokemon by ID : http://localhost:3000/api/pokemon/:id
+### Install dependencies
 
-![get-by-id](successfull-requests/get-by-id.png)
+npm install
 
-### CREATE a pokemon : http://localhost:3000/api/pokemons
+### Environment Variables Configuration (.env)
 
-![create](successfull-requests/create.png)
+The project requires a MongoDB database to function. You must create a .env file in the root directory and add your connection URI:
 
-### UPDATE a pokemon : http://localhost:3000/api/pokemon/:id
+MONGODB_URI=mongodb+srv://<USER>:<PASSWORD>@<CLUSTER>.mongodb.net/pokemon
 
-![update](successfull-requests/update.png)
+### Seed the Database
+To populate the database with initial sample data (Bulbasaur, Charmander, etc.), run the following script:
 
-### DELETE a pokemon : http://localhost:3000/api/pokemon/:id
+node seedDatabase.js
 
-![delete](successfull-requests/delete.png)
+### Running the Application
+
+npm run start
+Once the server is running, you can access the User Interface at:
+👉 http://localhost:3001
